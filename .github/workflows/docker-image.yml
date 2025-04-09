@@ -20,6 +20,8 @@ jobs:
       contents: read
       packages: write
 
+    # Modified version of https://github.com/actions/starter-workflows/blob/main/ci/docker-publish.yml
+    # Could also consider this one: https://github.com/marketplace/actions/build-and-push-docker-images
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
