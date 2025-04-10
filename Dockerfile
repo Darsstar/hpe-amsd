@@ -4,7 +4,8 @@ LABEL org.opencontainers.image.source="https://github.com/endrebjorsvik/hpe-amsd
 LABEL org.opencontainers.image.description="Small container for running HPE AMS software in a privileged container on TrueNAS Scale."
 LABEL org.opencontainers.image.licenses="MIT"
 
-RUN apt-get update && apt install -y curl gnupg apt-utils iproute2 && apt-get clean && rm -rf /var/lib/apt/lists/*
+# Install dependencies for populating APT keyring
+RUN apt-get update && apt-get install -y curl gnupg apt-utils iproute2 && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # See https://downloads.linux.hpe.com/SDR/keys.html for repo signing keys
 RUN mkdir -m 0755 -p /etc/apt/keyrings
