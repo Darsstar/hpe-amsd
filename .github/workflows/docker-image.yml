@@ -8,7 +8,7 @@ on:
     tags:
       - "v*.*"
   schedule:
-    - cron: $cron-weekly
+    - cron: '48 3 * * 2'
 
 env:
   # Use docker.io for Docker Hub if empty
