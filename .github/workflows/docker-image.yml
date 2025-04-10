@@ -2,9 +2,13 @@ name: Build and push Docker image to GHCR
 
 on:
   push:
-    branches: ["main"]
-  pull_request:
-    branches: ["main"]
+    branches:
+      - "main"
+    # Publish semver tags as releases.
+    tags:
+      - "v*.*"
+  schedule:
+    - cron: $cron-weekly
 
 env:
   # Use docker.io for Docker Hub if empty
