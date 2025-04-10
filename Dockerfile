@@ -36,7 +36,6 @@ RUN echo "OPTIONS=-L" > /etc/sysconfig/cpqIde
 RUN echo "OPTIONS=-L" > /etc/sysconfig/cpqScsi
 RUN echo "OPTIONS=-L" > /etc/sysconfig/cpqiScsi
 RUN echo "OPTIONS=-L" > /etc/sysconfig/mr_cpqScsi
-RUN echo "OPTIONS=-L" > /etc/sysconfig/smad
 RUN echo "OPTIONS=-L" > /etc/sysconfig/smad_rev
 
 CMD ["/usr/bin/systemctl", "--init", "-vv"]
