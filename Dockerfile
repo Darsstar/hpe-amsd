@@ -38,6 +38,4 @@ RUN echo "OPTIONS=-L" > /etc/sysconfig/cpqScsi
 RUN echo "OPTIONS=-L" > /etc/sysconfig/cpqiScsi
 RUN echo "OPTIONS=-L" > /etc/sysconfig/smad_rev
 
-RUN rm "/etc/systemd/system/multi-user.target.wants/mr_cpqScsi.service"
-
 CMD ["/usr/bin/systemctl", "--init", "-vv"]
